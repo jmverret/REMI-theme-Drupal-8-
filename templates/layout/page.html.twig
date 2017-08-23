@@ -176,7 +176,7 @@
 <!-- layout -->
 <div id="wrapper">
   <!-- start: Container -->
-  <div class="container_fluid">
+  <div class="container-fluid" style="margin-left: 15px;margin-right: 15px;">
 
     <!--Content top-->
       {% if page.content_top %}
@@ -246,7 +246,7 @@
   {% if page.bottom_first or page.bottom_second or page.bottom_third %}
     <div class="bottom-widgets">
       <!-- Start Container -->
-      <div class="container">
+      <div class="container-fluid" style="margin-left: 15px;margin-right: 15px;">
 
         <div class="row">
 
@@ -293,7 +293,7 @@
 <!-- start: Footer -->
 {% if  is_front and (page.footer_first or page.footer_second or page.footer_third) %}
   <div class="footerwidget">
-    <div class="container">
+    <div class="container-fluid" style="margin-left: 15px;margin-right: 15px;">
 
       <div class="row">
 
@@ -329,7 +329,7 @@
 <!-- Start Footer Menu -->
 {% if page.footer_menu %}
   <div class="footer-menu">
-    <div class="container">
+    <div class="container-fluid" style="margin-left: 15px;margin-right: 15px;">
       <div class="row">
         <div class="col-sm-6 col-md-6">
           {{ page.footer_menu }}
