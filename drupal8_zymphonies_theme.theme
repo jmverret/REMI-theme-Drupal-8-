@@ -63,17 +63,17 @@ function drupal8_zymphonies_theme_preprocess_page(&$variables) {
 
   // Add information about the number of sidebars.
   if (!empty($variables['page']['sidebar_first']) && !empty($variables['page']['sidebar_second'])) {
-    $variables['contentlayout'] = 'col-md-6';
-    $variables['sidebarfirst'] = 'col-md-3';
-    $variables['sidebarsecond'] = 'col-md-3';
+    $variables['contentlayout'] = 'col-md-8';
+    $variables['sidebarfirst'] = 'col-md-2';
+    $variables['sidebarsecond'] = 'col-md-2';
   }
   elseif (!empty($variables['page']['sidebar_first'])) {
-    $variables['contentlayout'] = 'col-md-9 ';
-    $variables['sidebarfirst'] = 'col-md-3';
+    $variables['contentlayout'] = 'col-md-10 ';
+    $variables['sidebarfirst'] = 'col-md-2';
   }
   elseif (!empty($variables['page']['sidebar_second'])) {
-    $variables['contentlayout'] = 'col-md-9';
-    $variables['sidebarsecond'] = 'col-md-3';
+    $variables['contentlayout'] = 'col-md-10';
+    $variables['sidebarsecond'] = 'col-md-2';
   }
   else {
     $variables['contentlayout'] = 'col-md-12';
@@ -87,7 +87,7 @@ function drupal8_zymphonies_theme_preprocess_page(&$variables) {
   $variables['linkedin_url'] = theme_get_setting('linkedin_url');
   $variables['pinterest_url'] = theme_get_setting('pinterest_url');
   $variables['rss_url'] = theme_get_setting('rss_url');
-  $variables['copyright_text'] = theme_get_setting('copyright_text');  
+  $variables['copyright_text'] = theme_get_setting('copyright_text');
   $variables['show_credit_link'] = theme_get_setting('show_credit_link');
 }
 
@@ -113,7 +113,7 @@ function drupal8_zymphonies_theme_preprocess_menu(&$variables, $hook) {
  * Implements hook_form_system_theme_settings_alter().
  */
 function drupal8_zymphonies_theme_form_system_theme_settings_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
-  
+
   //Social Icon Link
   $form['drupal8_zymphonies_theme_settings']['social_icon'] = array(
     '#type' => 'details',
